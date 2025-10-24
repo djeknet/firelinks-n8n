@@ -1,0 +1,54 @@
+{
+  "name": "n8n-nodes-firelinks",
+  "version": "1.0.0",
+  "description": "n8n node for Firelinks - Link shortener and cloaking service with advanced analytics",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "firelinks",
+    "link shortener",
+    "cloaking",
+    "analytics"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/djeknet/firelinks-n8n.git",
+  "author": {
+    "name": "Evgenii Orel",
+    "email": "evgen@nitiweb.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djeknet/firelinks-n8n.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials --ext .ts",
+    "lintfix": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/FirelinksApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Firelinks/Firelinks.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "^1.0.0",
+    "typescript": "~5.0.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
+

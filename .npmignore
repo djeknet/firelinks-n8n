@@ -1,0 +1,13 @@
+*.ts
+!dist/**/*.d.ts
+tsconfig.json
+.vscode/
+.idea/
+.git/
+.github/
+node_modules/
+credentials/
+nodes/
+*.log
+.DS_Store
+
