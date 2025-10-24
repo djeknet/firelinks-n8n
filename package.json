@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-firelinks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n node for Firelinks - Link shortener and cloaking service with advanced analytics",
   "keywords": [
     "n8n-community-node-package",
@@ -20,7 +20,8 @@
     "type": "git",
     "url": "https://github.com/djeknet/firelinks-n8n.git"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
@@ -30,7 +31,9 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "LICENSE.md"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
